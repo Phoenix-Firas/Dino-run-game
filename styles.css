@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+
+    color: white;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    
+}
+#title-h1{
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translate(-10%);
+}
+#game-square{
+    margin-top: 30px;
+    width:800px;
+    height: 400px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px white;
+    background-color: rgb(205, 235, 255);
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%);
+
+}
+
+#info{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translate(-20%);
+}
+#auto-play-btn {
+        padding: 7px 20px;
+            font-size: 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 1px solid white;
+            box-shadow: 0px 0px 3px white;
+    
+    color: rgb(0, 0, 0);
+    
+}
+
+#play-btn{
+    padding:10px 20px;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    box-shadow: 0px 0px 3px white;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+#play-btn:hover,
+#auto-play-btn:hover{
+    box-shadow: 0px 0px 6px white;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+
+}
+
+#instructions{
+    color:black;
+position: fixed;
+left:70%;
+top:80%;
+
+}
+#arrow-up-div{
+    position: fixed;
+    left: 67%;
+    top: 80%;
+    width:15px;
+    height: 15px;
+    background: black;
+    clip-path: polygon(53% 41%, 0% 100%, 100% 100%);
+}
+
+#score {
+    margin-left: 20px;
+    margin-top: 5px;
+    
+}
+
+/* ////////////////////////////////////// */
+
+#cloud{
+    position: fixed;
+    top:50px;
+    left:100%;
+    width:50px;
+    height:40px;
+    opacity: 0.5;
+animation-delay: 0.5s;
+}
+#cloud-2 {
+    position: fixed;
+    top: 50px;
+    left: 100%;
+    width: 100px;
+    height: 60px;
+    opacity:0.5;
+    animation-delay: 4s;
+
+}
+.cloud-move{
+        animation: clouds-move 10s linear infinite ;
+}
+@keyframes clouds-move {
+    to{
+        left:-100px;
+    }
+    
+}
+
+#dino-img{
+    width:50px;
+    height: 50px;
+    position: relative;
+    left: 100px;
+    top: 230px;
+    /*  */
+}
+.jump{
+    animation: dino-jump 1s ease-out forwards;
+}
+@keyframes dino-jump {
+    0%{
+        top: 230px;
+    }
+    30%{
+        top: 160px;
+    }
+        40% {
+            top: 165px;
+        }
+    100%{
+        top: 230px;
+    }
+}
+
+#ground{
+    height: 0px;
+    border: 1px solid black;
+    position: relative;
+    top: 230px;
+}
+
+
+#cactus {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 100%;
+    top: 232px;
+
+}
+#cactus-2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 100%;
+    top: 220px;
+
+}
+#cactus-3 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 100%;
+    top: 210px;
+
+}
+.cactus-animation{
+animation: cactus-move 3s linear infinite;
+animation-delay: 2s;
+}
+.cactus2-animation {
+    animation: cactus-move 3s linear infinite;
+    animation-delay: 0.5s;
+}
+.cactus3-animation {
+    animation: cactus-move 3s linear infinite;
+    animation-delay: 3.5s;
+}
+@keyframes cactus-move {
+    to{
+        left: -70px;
+    }
+}
